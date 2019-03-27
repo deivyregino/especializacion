@@ -1,20 +1,28 @@
 package edu.cecar.controladores;
 
-import android.os.AsyncTask;
+
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
+
+
 
 public class MainActivity extends AppCompatActivity {
     private TextInputEditText teNombres;
     private TextInputEditText teNacionalidad;
     private TextInputEditText teSexo;
     private TextInputEditText teCategoria;
+    private TextInputEditText textInputEditText;
+    private ListView lista;
 
-    // String url = "http://scienti.colciencias.gov.co:8081/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000733180";
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +34,10 @@ public class MainActivity extends AppCompatActivity {
         teNacionalidad = findViewById(R.id.teNacionalidad);
         teSexo = findViewById(R.id.teSexo);
         teCategoria = findViewById(R.id.teCategorizado);
+        textInputEditText = findViewById(R.id.teInvestigaciones);
+        lista = findViewById(R.id.miLista);
+
+
 
 
         Button btObtenerDatosCVLac = findViewById(R.id.btObtenerDatos);
@@ -44,7 +56,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                Investigador investigador = ExtraerDatoCVLAC.getDatos("http://scienti.colciencias.gov.co:8081/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000733180");
+                Investigador investigador = ExtraerDatoCVLAC.getDatos("http://scienti.col" +
+                        "ciencias.gov.co:8081/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000402478");
                 adicionarDatosCasillasTexto(investigador);
 
             }
@@ -64,6 +77,11 @@ public class MainActivity extends AppCompatActivity {
                 teNacionalidad.setText(investigador.getNacionalidad());
                 teSexo.setText(investigador.getSexo());
                 teCategoria.setText(investigador.isCategorizado() ? "Si" : "No");
+                textInputEditText.setText(investigador.getPrueba());
+
+                ArrayAdapter<String> adaptador = new ArrayAdapter<String>(MainActivity.this,android.R.layout.simple_list_item_1,investigador.getArregloInvestigacion());
+
+                lista.setAdapter(adaptador);
 
             }
         });
