@@ -1,3 +1,12 @@
+
+/* se definen los Siguiente plugins
+
+	org.sonarqube: Plugins de conexion a SonarQube
+
+	jacoco-android: Plugins para la generación de pruebas de cobertura
+
+*/
+
 apply plugin: 'com.android.application'
 
 android {
@@ -18,6 +27,13 @@ android {
     }
 }
 
+/*
+ Configuración de conexion al servidor de SonarQube
+
+*/
+
+
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:28.0.0'
@@ -29,3 +45,6 @@ dependencies {
     implementation 'org.jsoup:jsoup:1.11.3'
 
 }
+
+
+
