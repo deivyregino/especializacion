@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
 
                 Investigador investigador = ExtraerDatoCVLAC.getDatos("http://scienti.col" +
-                        "ciencias.gov.co:8081/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000402478");
+                        "ciencias.gov.co:8081/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000733180");
                 adicionarDatosCasillasTexto(investigador);
 
             }

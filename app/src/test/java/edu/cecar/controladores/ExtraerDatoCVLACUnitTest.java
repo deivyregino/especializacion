@@ -19,11 +19,11 @@ public class ExtraerDatoCVLACUnitTest {
     public void testDatosCVLAC() {
 
         // Se definen los datos de referencia con los que se probara el metodo extraerDatos.
-        Investigador investigadorUno = ExtraerDatoCVLAC.getDatos("http://scienti.colciencias.gov.co:8081/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0001376707");
+        Investigador investigadorUno = ExtraerDatoCVLAC.getDatos("http://scienti.colciencias.gov.co:8081/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000733180");
 
         // Se define los datos esperados.
 
-        String nombreInvetigadorUno = "Guillermo Carlos Hernández Hernández";
+        String nombreInvetigadorUno = "Jhon Jaime Mendez Alandete";
         String nacionalidadInvestigadorUno = "Colombiana";
         String sexoInvestigadorUno = "Masculino";
 

@@ -73,13 +73,13 @@ public class ExtraerDatoCVLAC {
 
 
 
-            for(int i = 0;i<arreglo.size();i++){
+            /*for(int i = 0;i<arreglo.size();i++){
 
                 Log.i("MyApp","I am here "+"hola"+arreglo.get(i));
 
 
                 // System.out.println("hola"+arreglo.get(i));
-            }
+            }**/
 
 
             //comprobamos si existe Linea de investigacion
