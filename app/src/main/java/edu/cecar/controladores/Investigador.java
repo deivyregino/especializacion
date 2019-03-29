@@ -18,7 +18,6 @@ import java.util.ArrayList;
 /**
  Esta clase modela los datos de un Investigador
  */
-// Cometario Uno
 public class Investigador {
 
     private String nombres;
@@ -27,9 +26,6 @@ public class Investigador {
     private String prueba;
     private ArrayList<String> arregloInvestigacion;
     private boolean categorizado;
-// Cometario Uno
-// Cometario Uno
-    // Cometario Uno
     public Investigador(String nombres, String nacionalidad, String sexo, String prueba,ArrayList arregloInvestigacion, boolean categorizado) {
 
         this.nombres = nombres;
@@ -38,9 +34,7 @@ public class Investigador {
         this.prueba = prueba;
         this.arregloInvestigacion = arregloInvestigacion;
         this.categorizado = categorizado;
-// Cometario Uno
     }
-    // Cometario Uno
     public ArrayList<String> getArregloInvestigacion() {
         return arregloInvestigacion;
     }
@@ -48,7 +42,6 @@ public class Investigador {
     public void setArregloInvestigacion(ArrayList<String> arregloInvestigacion) {
         this.arregloInvestigacion = arregloInvestigacion;
     }
-    // Cometario Uno
     public String getPrueba() {
         return prueba;
     }
@@ -80,8 +73,6 @@ public class Investigador {
     public boolean isCategorizado() {
         return categorizado;
     }
-// Cometario Uno
-// Cometario Uno
     @Override
     public String toString() {
         return super.toString();
