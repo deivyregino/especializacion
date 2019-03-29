@@ -1,7 +1,5 @@
 package edu.cecar.controladores;
 
-import android.util.Log;
-
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -67,7 +65,7 @@ public class ExtraerDatoCVLAC {
                 arreglo.add(i,filaTablaInvestigacion.get(i).select("td").get(0).text());
 
                 }
-                
+
 
             //comprobamos si existe Linea de investigacion
             if (existeInvestigacion=="Líneas de investigación"){
