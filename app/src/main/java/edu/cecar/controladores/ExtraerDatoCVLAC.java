@@ -86,8 +86,6 @@ public class ExtraerDatoCVLAC {
 
         } catch (IOException e) {
 
-            e.printStackTrace();
-
         }
 
         return investigador;
