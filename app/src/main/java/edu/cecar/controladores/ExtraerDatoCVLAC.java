@@ -12,7 +12,7 @@ public class ExtraerDatoCVLAC {
 
 
     private ExtraerDatoCVLAC(){
-
+// Cometario Uno
 
     }
 
@@ -27,7 +27,7 @@ public class ExtraerDatoCVLAC {
             //Se obtiene el documento HTML
             Document documentoHTML = Jsoup.connect(url).get();
 
-
+// Cometario Uno
 
             Element tablas = documentoHTML.select("table").get(1); //Se obtiene la primera tabla
             Element tablasInvestigacion = documentoHTML.select("table").get(7); //Se obtiene la sexta tabla
@@ -67,7 +67,8 @@ public class ExtraerDatoCVLAC {
                 }
 
 
-            
+
+                // Cometario Uno
             if (existeInvestigacion=="Líneas de investigación"){
                 //Se crea el objeto investigador
                 investigador = new Investigador(nombre, nacionalidad, sexo, "No posee linea de investigacion",arreglo,true);
@@ -80,7 +81,7 @@ public class ExtraerDatoCVLAC {
             }
 
 
-
+// Cometario Uno
 
 
 
@@ -92,6 +93,6 @@ public class ExtraerDatoCVLAC {
 
     }
 
-
+// Cometario Uno
 
 }

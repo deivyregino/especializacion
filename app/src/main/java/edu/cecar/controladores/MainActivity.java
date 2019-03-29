@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         textInputEditText = findViewById(R.id.teInvestigaciones);
         lista = findViewById(R.id.miLista);
 
-
+// Cometario Uno
 
 
         Button btObtenerDatosCVLac = findViewById(R.id.btObtenerDatos);
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
+    // Cometario Uno
     public void extraerDatosCVLAC() {
 
         new Thread(new Runnable() {
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         }).start();
 
     }
-
+    // Cometario Uno
     public void adicionarDatosCasillasTexto(final Investigador investigador) {
 
         runOnUiThread(new Runnable() {
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 textInputEditText.setText(investigador.getPrueba());
 
                 ArrayAdapter<String> adaptador = new ArrayAdapter<String>(MainActivity.this,android.R.layout.simple_list_item_1,investigador.getArregloInvestigacion());
-
+// Cometario Uno
                 lista.setAdapter(adaptador);
 
             }
