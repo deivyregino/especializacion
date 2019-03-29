@@ -25,7 +25,6 @@ public class Investigador {
     private String nacionalidad;
     private String sexo;
     private String prueba;
-    //private String[] arregloInvestigacion;
     private ArrayList<String> arregloInvestigacion;
     private boolean categorizado;
 

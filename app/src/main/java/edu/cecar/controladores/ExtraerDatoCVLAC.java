@@ -40,8 +40,6 @@ public class ExtraerDatoCVLAC {
             int filaNombre = 0;
             int filanacionalidad = 2;
             int filaSexo =3;
-            //se crea la fila investigacion
-            // int filaInvestigacion=0;
 
             if (filasTabla.size()>4){
                 filaNombre =2;
@@ -56,31 +54,20 @@ public class ExtraerDatoCVLAC {
 
             ////
 
-            int tamaño = filaTablaInvestigacion.size();
+            int tamano = filaTablaInvestigacion.size();
             String existeInvestigacion = filaTablaInvestigacion.get(0).select("td").get(0).text();
             String investigaciones=filaTablaInvestigacion.get(0).select("td").get(0).text();
 
 
             ArrayList<String> arreglo = new ArrayList<String>();
 
-            for (int i = 0; i<tamaño-1; i++) {
+            for (int i = 0; i<tamano-1; i++) {
 
 
                 arreglo.add(i,filaTablaInvestigacion.get(i).select("td").get(0).text());
 
-                System.out.println(arreglo.get(i));}
-
-
-
-
-            /*for(int i = 0;i<arreglo.size();i++){
-
-                Log.i("MyApp","I am here "+"hola"+arreglo.get(i));
-
-
-                // System.out.println("hola"+arreglo.get(i));
-            }**/
-
+                }
+                
 
             //comprobamos si existe Linea de investigacion
             if (existeInvestigacion=="Líneas de investigación"){
