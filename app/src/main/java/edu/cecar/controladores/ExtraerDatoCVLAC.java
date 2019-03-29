@@ -67,7 +67,7 @@ public class ExtraerDatoCVLAC {
                 }
 
 
-            //comprobamos si existe Linea de investigacion
+            
             if (existeInvestigacion=="Líneas de investigación"){
                 //Se crea el objeto investigador
                 investigador = new Investigador(nombre, nacionalidad, sexo, "No posee linea de investigacion",arreglo,true);
